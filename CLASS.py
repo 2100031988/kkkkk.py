@@ -1,11 +1,5 @@
-a="sabya is intelligent"
-print(len(a))
-l=["sabya"]
-print(len(l))
+import pytest
 
-def multiplyList():
-    l1=[10,20]
-    l2=[30,40]
-    print("the multiplication of the two list are: ")
-
-multiplyList()
+@pytest.mark.parametrize("num, output",[(1,11),(2,22),(3,35),(4,44)])
+def test_multiplication_11(num, output):
+   assert 11*num == output
